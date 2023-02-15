@@ -19,10 +19,10 @@ def test_total_words(q1,q2):
     return (len(w1) + len(w2))
 
 
-def test_fetch_token_features(q1, q2):
+def test_fetch_token_features(q1,q2):
     SAFE_DIV = 0.0001
 
-    STOP_WORDS = pickle.load(open('stopwords.pkl','rb'))
+    STOP_WORDS = stopwords.words(open('stopwords','rb'))
 
     token_features = [0.0] * 8
 
